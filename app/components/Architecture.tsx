@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const Architecture = () => {
   return (
-    <section id="architecture" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-      <div className="flex flex-col items-center mb-16 text-center animate-fade-up">
+    <section id="architecture" className="py-12 md:py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+      <div className="flex flex-col items-center mb-10 md:mb-16 text-center animate-fade-up">
         <div className="inline-block px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-bold mb-6 tracking-wider uppercase italic">
           For Developers
         </div>
@@ -18,7 +18,7 @@ const Architecture = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10 md:mb-16">
         <div className="glass-card p-6 border border-white/5 bg-white/5 hover:bg-white/10 transition-all">
           <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 text-primary font-bold text-xl mb-4">1</div>
           <h4 className="font-bold mb-2 italic uppercase text-lg">Main Process</h4>

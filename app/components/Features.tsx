@@ -48,8 +48,8 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-32 px-6 max-w-6xl mx-auto">
-      <div className="flex flex-col items-center mb-20 text-center">
+    <section id="features" className="py-16 md:py-32 px-6 max-w-6xl mx-auto">
+      <div className="flex flex-col items-center mb-10 md:mb-20 text-center">
         <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">
           Everything you need.
           <br />

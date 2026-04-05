@@ -3,10 +3,12 @@ import type { Metadata } from 'next';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Providers from './components/Providers';
 import Architecture from './components/Architecture';
 import DownloadCTA from './components/DownloadCTA';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://imposter.im'),
   title: 'Imposter - Beating a Broken System',
   description: "The AI Phantom That Doesn't Exist—Until You Need It. Stealth AI Assistant with live transcription and OCR.",
   openGraph: {
@@ -38,6 +40,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <Providers />
       <Architecture />
       <DownloadCTA />
     </main>
