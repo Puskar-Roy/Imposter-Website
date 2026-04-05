@@ -1,83 +1,70 @@
-# [Imposter AI](https://github.com/Puskar-Roy/Imposter-Website) — Landing Page
+# Imposter: Discrete AI Assistant
 
-> **The AI Phantom That Doesn't Exist—Until You Need It.**
-
-![Imposter Logo](public/images/logo.png)
-
-This repository contains the source code for the official landing page of **Imposter**, a stealthy, professional-grade AI assistant for Windows. The website serves as the primary distribution hub, setup guide, and feature showcase for the Imposter desktop application.
-
----
-
-## 🖼️ Application Showcase
-
-![Imposter Desktop Mockup](public/images/mockup.png)
-
-*The Imposter interface: A frameless, always-on-top AI overlay designed for maximum productivity and zero visibility during screen-sharing.*
+<div align="center">
+  <img src="public/images/logo.png" width="48" alt="Imposter Logo">
+  <h3>A seamless, unobtrusive AI interface for your desktop environment.</h3>
+</div>
 
 ---
 
-## 🚀 About the App
+## Project Overview
 
-Imposter is built for professionals who need AI assistance without the clutter or privacy risks of traditional cloud-based tools. 
-
-### Key Features of the Desktop App:
-- **🕵️ Stealth Mode**: Invisible to Zoom, Teams, OBS, and standard screen capture software via hardware-level DRM protection.
-- **🎙️ Live Transcription**: Real-time system audio capture (via AssemblyAI) displayed in a floating Dynamic Island.
-- **👁️ Screen OCR**: Snip any region of your screen to instantly feed text into the AI context using Tesseract.
-- **🧠 Your Models, Your Rules**: Connect to **Ollama** for 100% local operation or use **OpenRouter** to access hundreds of cloud models with your own API keys.
-- **🔒 Zero-Cloud Security**: No data is stored on our servers. Prompts, keys, and history stay on your machine.
+Imposter is a background-first AI assistant application designed for maximum discretion. Built on a specialized architecture, it remains hidden, non-intrusive, and computationally isolated from primary workflows until explicitly triggered. This repository contains the source code for the official landing page and distribution hub.
 
 ---
 
-## 🌐 Website Tech Stack
+## Technical Architecture
 
-This landing page is built using modern web standards for a premium, fast experience:
+The application leverages a high-performance Electron-based shell communicating directly with local Ollama instances or premium cloud endpoints. To ensure absolute privacy, all application data—including system prompts, configuration variables, and custom personas—is stored locally on the user's device.
 
-- **Framework**: [Next.js](https://nextjs.org) (App Router)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) 
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Icons**: [Lucide React](https://lucide.dev) & Custom SVGs
-- **Deployment**: Optimized for Vercel
+### System Capabilities
+
+| Category | Highlights |
+|---|---|
+| **Interface** | Frameless, Transparent, Always-on-top, OS-level Content Protection |
+| **Intelligent Engine** | Multi-turn memory, Custom Instruction Context, Markdown rendering |
+| **Multi-Provider** | Local models via Ollama, Cloud models via OpenRouter |
+| **Audio Processing** | Live system audio capture, AssemblyAI transcription, Dynamic Island overlay |
+| **Screen Capture & OCR** | Full-screen coordinate crop, Local Tesseract.js text extraction |
 
 ---
 
-## 🛠️ Local Development
+## Global Shortcuts
 
-To run this landing page locally:
+Control the application via system-level shortcuts:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Puskar-Roy/Imposter-Website.git
-   cd imposter-website
-   ```
+| Shortcut | System Action |
+| :--- | :--- |
+| `Ctrl + Shift + I` | Focus Input |
+| `Ctrl + Shift + Enter` | Execute Query |
+| `Ctrl + Shift + Up/Down` | Vertical Scroll |
+| `Ctrl + Shift + C` | Deep Copy AI Response |
+| `Ctrl + Shift + Q` | Terminate Application |
+| `Ctrl + Shift + D` | Toggle Developer Tools |
 
-2. **Install dependencies**:
+---
+
+## Getting Started
+
+### Local Development
+
+1. **Install Dependencies**:
    ```bash
    pnpm install
    ```
-
-3. **Run the development server**:
+2. **Launch the Environment**:
    ```bash
    pnpm dev
    ```
-
-4. **Build for production**:
+3. **Build for Production**:
    ```bash
    pnpm build
    ```
 
 ---
 
-## 🔗 Links
+## Metadata and Maintenance
 
-- **Main App Repository**: [Puskar-Roy/Imposter](https://github.com/Puskar-Roy/Imposter)
-- **Official Website**: [imposter.im](https://imposter.im)
-- **Download & Setup Guide**: [/download](https://imposter.im/download)
-
----
-
-## ⚖️ License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+Developed by Puskar Roy. All application assets, prompts, and local history are stored securely on the host machine.
 
 © 2026 Imposter AI. All rights reserved.
