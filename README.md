@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# [Imposter AI](https://github.com/Puskar-Roy/Imposter-Website) — Landing Page
 
-## Getting Started
+> **The AI Phantom That Doesn't Exist—Until You Need It.**
 
-First, run the development server:
+![Imposter Logo](public/images/logo.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This repository contains the source code for the official landing page of **Imposter**, a stealthy, professional-grade AI assistant for Windows. The website serves as the primary distribution hub, setup guide, and feature showcase for the Imposter desktop application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🖼️ Application Showcase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Imposter Desktop Mockup](public/images/mockup.png)
 
-## Learn More
+*The Imposter interface: A frameless, always-on-top AI overlay designed for maximum productivity and zero visibility during screen-sharing.*
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 About the App
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Imposter is built for professionals who need AI assistance without the clutter or privacy risks of traditional cloud-based tools. 
 
-## Deploy on Vercel
+### Key Features of the Desktop App:
+- **🕵️ Stealth Mode**: Invisible to Zoom, Teams, OBS, and standard screen capture software via hardware-level DRM protection.
+- **🎙️ Live Transcription**: Real-time system audio capture (via AssemblyAI) displayed in a floating Dynamic Island.
+- **👁️ Screen OCR**: Snip any region of your screen to instantly feed text into the AI context using Tesseract.
+- **🧠 Your Models, Your Rules**: Connect to **Ollama** for 100% local operation or use **OpenRouter** to access hundreds of cloud models with your own API keys.
+- **🔒 Zero-Cloud Security**: No data is stored on our servers. Prompts, keys, and history stay on your machine.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Website Tech Stack
+
+This landing page is built using modern web standards for a premium, fast experience:
+
+- **Framework**: [Next.js](https://nextjs.org) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) 
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Icons**: [Lucide React](https://lucide.dev) & Custom SVGs
+- **Deployment**: Optimized for Vercel
+
+---
+
+## 🛠️ Local Development
+
+To run this landing page locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Puskar-Roy/Imposter-Website.git
+   cd imposter-website
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   pnpm dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   pnpm build
+   ```
+
+---
+
+## 🔗 Links
+
+- **Main App Repository**: [Puskar-Roy/Imposter](https://github.com/Puskar-Roy/Imposter)
+- **Official Website**: [imposter.im](https://imposter.im)
+- **Download & Setup Guide**: [/download](https://imposter.im/download)
+
+---
+
+## ⚖️ License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+© 2026 Imposter AI. All rights reserved.
