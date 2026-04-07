@@ -27,6 +27,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
           <Link href="/features" className="hover:text-primary transition-colors">Features</Link>
+          <Link href="/model-providers" className="hover:text-primary transition-colors">Model Providers</Link>
           <Link href="/architecture" className="hover:text-primary transition-colors">Architecture</Link>
           <Link href={siteConfig.github} target="_blank" className="hover:text-primary transition-colors">GitHub</Link>
         </div>
@@ -57,6 +58,7 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden mt-2 mx-auto max-w-7xl bg-black/90 backdrop-blur-xl border border-white/5 rounded-2xl p-6 flex flex-col gap-4 text-sm font-medium text-zinc-400 animate-fade-up">
           <Link href="/features" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Features</Link>
+          <Link href="/model-providers" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Model Providers</Link>
           <Link href="/architecture" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Architecture</Link>
           <Link href={siteConfig.github} target="_blank" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">GitHub</Link>
           <Link

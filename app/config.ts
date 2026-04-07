@@ -24,7 +24,7 @@ const siteConfig = {
   assemblyAiUrl: "https://www.assemblyai.com",
   assemblyAiDashboardUrl: "https://www.assemblyai.com/app/account",
 
-  futureProviders: ["OpenAI", "Google Gemini", "Grok (xAI)"],
+  futureProviders: ["OpenAI", "Grok (xAI)"],
 
   logo: "/images/logo.png",
   mockup: "/images/mockup.png",

@@ -10,36 +10,33 @@ const Hero = () => {
 
       <div className="animate-fade-up">
         <div className="inline-block px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-bold mb-6 tracking-wider uppercase">
-          Invisible AI Desktop Assistant
+          Beating a Broken System
         </div>
 
         <h1 className="text-5xl md:text-8xl font-black mb-6 teal-gradient-text tracking-tighter uppercase italic -skew-x-6">
-          Beating a Broken System
+          The Invisible AI Assistant
         </h1>
 
-        <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-4 leading-relaxed font-mono">
-          A seamless, unobtrusive AI interface for your desktop environment.
+        <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-4 leading-relaxed font-mono italic">
+          An undetectable multi-LLM companion. Designed for your most critical live calls and assessments.
         </p>
 
         <p className="text-sm md:text-base text-zinc-500 max-w-3xl mx-auto mb-4 leading-relaxed">
-          Invisible to Zoom. Invisible to Teams. Invisible to OBS.
-          A frameless, always-on-top AI overlay with <strong className="text-zinc-300">live voice transcription</strong>,{' '}
-          <strong className="text-zinc-300">screen OCR</strong>, and <strong className="text-zinc-300">multi-provider LLM chat</strong> — running locally on your machine.
-          Zero cloud storage. Zero trace. 100% stealth.
+          Focus your performance with a discreet, always-on-top AI layer that sits on your desktop. Invisible to meeting platforms and screen-sharing, <strong className="text-zinc-300">Imposter </strong> connects you to the world&apos;s most powerful models—Ollama, Gemini, and OpenRouter—in total privacy. Zero trace. 100% stealth.
         </p>
 
         <p className="text-xs text-zinc-600 max-w-2xl mx-auto mb-12 leading-relaxed">
           Works offline with <strong className="text-zinc-400">Ollama</strong>. Add your own API keys for{' '}
-          <strong className="text-zinc-400">OpenRouter</strong> and <strong className="text-zinc-400">AssemblyAI</strong> — stored locally, never on our servers.
+          <strong className="text-zinc-400">OpenRouter</strong>, <strong className="text-zinc-400">Google Gemini</strong>, and <strong className="text-zinc-400">AssemblyAI</strong> — stored locally, never on our servers.
           More providers coming soon: {siteConfig.futureProviders.join(', ')}.
         </p>
 
         <div className="flex flex-wrap gap-3 justify-center mb-6">
-          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">Content Protection DRM</span>
-          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">Tesseract OCR</span>
-          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">AssemblyAI Realtime</span>
-          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">Ollama + OpenRouter</span>
-          <span className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold uppercase tracking-wider">Open Source</span>
+          <span className="px-3 py-1 rounded-full bg-primary/20 border border-primary/40 text-primary text-[11px] font-black uppercase tracking-widest animate-pulse">Alpha Build: Undetectable</span>
+          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">Zero Data Logging</span>
+          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">Local-First Storage</span>
+          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">Ollama + Gemini + OpenRouter</span>
+          <span className="px-3 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 text-[11px] font-bold uppercase tracking-wider">Grok (Coming Soon)</span>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">

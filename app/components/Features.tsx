@@ -11,7 +11,7 @@ const features = [
   },
   {
     title: "AI Chat",
-    line: "Context-aware conversations powered by 12 interview personas, resume injection, and job targeting.",
+    line: "Context-aware conversations powered by 12 high-stakes personas, document injection, and contextual targeting.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
     )
@@ -56,7 +56,7 @@ const Features = () => {
           <span className="text-zinc-500">Nothing they can see.</span>
         </h2>
         <p className="text-zinc-500 max-w-xl text-base leading-relaxed">
-          An invisible productivity layer that sits on top of your desktop.
+          An invisible edge for your most critical live conversations and assessments.
         </p>
       </div>
 
