@@ -29,6 +29,7 @@ const Navbar = () => {
           <Link href="/features" className="hover:text-primary transition-colors">Features</Link>
           <Link href="/model-providers" className="hover:text-primary transition-colors">Model Providers</Link>
           <Link href="/architecture" className="hover:text-primary transition-colors">Architecture</Link>
+          <Link href="/upcoming" className="hover:text-primary transition-colors">Upcoming</Link>
           <Link href={siteConfig.github} target="_blank" className="hover:text-primary transition-colors">GitHub</Link>
         </div>
 
@@ -60,6 +61,7 @@ const Navbar = () => {
           <Link href="/features" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Features</Link>
           <Link href="/model-providers" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Model Providers</Link>
           <Link href="/architecture" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Architecture</Link>
+          <Link href="/upcoming" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Upcoming Features</Link>
           <Link href={siteConfig.github} target="_blank" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">GitHub</Link>
           <Link
             href="/download"

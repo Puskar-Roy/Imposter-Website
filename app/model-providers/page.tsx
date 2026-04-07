@@ -326,18 +326,7 @@ const ModelProvidersPage = () => {
         </article>
       </div>
 
-      {/* Footer */}
-      <div className="bg-zinc-900/50 py-12 border-t border-white/5 text-center px-6">
-        <p className="text-zinc-500 mb-6 text-sm italic uppercase tracking-widest font-black">Ready to Setup?</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/download" className="btn-premium px-8 py-3 italic uppercase font-black tracking-tighter">
-            Get Imposter Now
-          </Link>
-          <Link href="/" className="px-8 py-3 border border-white/10 rounded-full hover:bg-white/5 transition-all italic uppercase font-black tracking-tighter text-sm flex items-center justify-center">
-            Return Home
-          </Link>
-        </div>
-      </div>
+
     </main>
   );
 };
