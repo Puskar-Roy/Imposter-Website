@@ -17,7 +17,9 @@ const siteConfig = {
   github: "https://github.com/Puskar-Roy/Imposter",
   githubReleases: "https://github.com/Puskar-Roy/Imposter/releases",
   githubTags: "https://github.com/Puskar-Roy/Imposter/tags",
-  downloadUrl: "https://github.com/Puskar-Roy/Imposter/releases/download/v1.0.0/Imposter-Setup-1.0.0.exe",
+  downloadUrl: "https://github.com/Puskar-Roy/Imposter/releases/download/v1.0.0/Imposter.Setup.1.0.0.exe",
+
+
 
   ollamaUrl: "https://ollama.com",
   openRouterUrl: "https://openrouter.ai",

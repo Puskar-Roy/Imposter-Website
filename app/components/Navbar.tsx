@@ -25,12 +25,12 @@ const GitHubStarButton = ({ className = "" }: { className?: string }) => {
     <Link
       href={siteConfig.github}
       target="_blank"
-      className={`btn-premium !text-[10px] !py-1 !px-2.5 shadow-[0_0_10px_rgba(0,166,126,0.15)] inline-flex items-center gap-1.5 group ${className} h-8`}
+      className={`btn-premium !py-1.5 !px-3 shadow-[0_0_15px_rgba(0,166,126,0.2)] inline-flex items-center gap-2 group ${className} h-8`}
     >
-      <FaGithub className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
-      <span className="font-black hidden sm:inline uppercase tracking-widest text-[9px]">Star on GitHub</span>
+      <FaGithub className="w-4 h-4 group-hover:scale-110 transition-transform" />
+      <span className="font-black hidden sm:inline uppercase tracking-[0.2em] text-[10px]">Star on GitHub</span>
       {stars !== null && (
-        <span className="ml-1 sm:pl-1.5 sm:border-l border-white/20 text-white tabular-nums font-black">
+        <span className="ml-0.5 pl-2 border-l border-white/20 text-white tabular-nums font-black text-[11px] flex items-center h-full">
           {stars}
         </span>
       )}
