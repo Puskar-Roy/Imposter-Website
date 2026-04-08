@@ -63,15 +63,14 @@ const FeaturesPage = () => {
               </p>
 
               <div className={
-                section.gridType === 'dual' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 
-                section.gridType === 'grid-3' ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4' : 
-                'grid grid-cols-1 sm:grid-cols-2 gap-4'
+                section.gridType === 'dual' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' :
+                  section.gridType === 'grid-3' ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4' :
+                    'grid grid-cols-1 sm:grid-cols-2 gap-4'
               }>
                 {section.items.map((item, i) => (
-                  <div key={i} className={`p-5 rounded-xl transition-all ${
-                    item.accent ? 'border border-primary/20 bg-primary/5' : 
-                    'border border-white/5 bg-zinc-900/50 hover:border-primary/20'
-                  } ${section.gridType === 'default' && item.accent ? 'sm:col-span-2' : ''}`}>
+                  <div key={i} className={`p-5 rounded-xl transition-all ${item.accent ? 'border border-primary/20 bg-primary/5' :
+                      'border border-white/5 bg-zinc-900/50 hover:border-primary/20'
+                    } ${section.gridType === 'default' && item.accent ? 'sm:col-span-2' : ''}`}>
                     <div className="flex items-center gap-2 mb-2">
                       <div className={`font-bold text-sm ${item.accent ? 'text-primary' : 'text-white'}`}>{item.t}</div>
                       {item.isNew && (
@@ -97,7 +96,7 @@ const FeaturesPage = () => {
               <h2 className="text-2xl font-black text-white uppercase tracking-tight italic">Keyboard Shortcuts</h2>
             </div>
             <p className="text-zinc-400 mb-6 text-sm">Every action at your fingertips. Global shortcuts work from anywhere on the system.</p>
-            
+
             <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Global Shortcuts</h3>
             <div className="overflow-x-auto mb-8">
               <table className="w-full text-sm text-left border-collapse">
@@ -167,14 +166,7 @@ const FeaturesPage = () => {
         </article>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-zinc-900/50 py-12 border-t border-white/5 text-center px-6">
-        <p className="text-zinc-500 mb-6 text-sm italic uppercase tracking-widest font-black text-shadow-glow">Ready to Disappear?</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="https://github.com/Puskar-Roy/Imposter/releases" target="_blank" className="btn-premium px-8 py-3 italic uppercase font-black tracking-tighter">Download</Link>
-          <Link href={ghUrl} target="_blank" className="px-8 py-3 border border-white/10 rounded-full hover:bg-white/5 transition-all italic uppercase font-black tracking-tighter text-sm">View Source</Link>
-        </div>
-      </footer>
+
     </main>
   );
 };

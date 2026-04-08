@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import siteConfig from '../config';
+import { FaWindows, FaGithub } from 'react-icons/fa';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 
 export const metadata = {
   title: 'Download & Setup - Imposter AI',
@@ -36,15 +38,15 @@ const DownloadPage = () => {
           {isReleased ? (
             <a
               href={siteConfig.downloadUrl}
-              className="btn-premium px-10 py-5 text-xl flex items-center gap-3 mb-4"
+              className="btn-premium px-10 py-5 text-xl flex items-center gap-3 mb-4 group"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="shrink-0"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" /></svg>
+              <FaWindows className="group-hover:scale-110 transition-transform" />
               Download Imposter v{siteConfig.version}
             </a>
           ) : (
             <div className="glass-card p-8 text-center max-w-lg w-full">
               <div className="p-4 bg-primary/10 text-primary rounded-full mb-6 w-16 h-16 flex items-center justify-center mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" /></svg>
+                <FaWindows size={28} />
               </div>
               <h3 className="text-2xl font-black mb-3 italic uppercase tracking-tight">Releasing Soon</h3>
               <p className="text-zinc-400 text-sm mb-6">
@@ -53,9 +55,9 @@ const DownloadPage = () => {
               <a
                 href={siteConfig.github}
                 target="_blank"
-                className="btn-premium px-8 py-3 text-sm inline-flex items-center gap-2"
+                className="btn-premium px-8 py-3 text-sm inline-flex items-center gap-2 group"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+                <FaGithub className="group-hover:scale-110 transition-transform" />
                 Star on GitHub
               </a>
             </div>
@@ -97,14 +99,15 @@ const DownloadPage = () => {
           </div>
           <p className="text-zinc-400 text-sm mb-8 max-w-3xl">
             Imposter supports multiple AI providers. You can use it fully offline with Ollama, or connect to cloud models via OpenRouter.
-            All API keys are stored <strong className="text-white">locally on your machine</strong> — never sent to Imposter servers.
+            All API keys are stored <strong className="text-white">locally on your machine</strong> — never sent to Imposter servers. {" "}
+            <Link href="/model-providers" className="text-primary hover:underline font-bold">
+              Click here for a detailed guide.
+            </Link>
           </p>
 
-          {/* Ollama */}
           <div className="glass-card p-6 sm:p-8 mb-6">
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-3 h-3 rounded-full bg-green-500" />
-              <h3 className="text-lg font-bold text-white">Option A: Ollama (Local / Offline)</h3>
+              <h3 className="text-lg font-bold text-white">Ollama (Local / Offline)</h3>
             </div>
             <div className="space-y-3 text-sm text-zinc-400 mb-6">
               <p>Ollama runs AI models locally on your machine. <strong className="text-white">Zero internet required.</strong></p>
@@ -116,11 +119,9 @@ const DownloadPage = () => {
             </div>
           </div>
 
-          {/* OpenRouter */}
           <div className="glass-card p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-3 h-3 rounded-full bg-blue-500" />
-              <h3 className="text-lg font-bold text-white">Option B: OpenRouter (Cloud)</h3>
+              <h3 className="text-lg font-bold text-white">OpenRouter (Cloud)</h3>
             </div>
             <div className="space-y-3 text-sm text-zinc-400 mb-6">
               <p>OpenRouter gives you access to hundreds of models (including free-tier options). Your API key stays local.</p>
@@ -205,7 +206,7 @@ const DownloadPage = () => {
 
         <div className="flex justify-center">
           <Link href="/" className="text-sm text-zinc-500 hover:text-primary transition-colors flex items-center gap-2 group">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="m15 18-6-6 6-6" /></svg>
+            <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
             Back to Home
           </Link>
         </div>
@@ -215,3 +216,4 @@ const DownloadPage = () => {
 };
 
 export default DownloadPage;
+

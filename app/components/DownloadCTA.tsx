@@ -52,7 +52,7 @@ const DownloadCTA = () => {
         </div>
       )}
 
-      <div className="mt-16 w-full px-4 sm:px-6">
+      {/* <div className="mt-16 w-full px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 px-5 py-3 backdrop-blur-md border border-white/5 bg-black/40 max-w-7xl mx-auto rounded-full text-zinc-600 text-xs sm:text-sm">
           <div className="flex items-center gap-2">
             <Image 
@@ -71,7 +71,7 @@ const DownloadCTA = () => {
             <a href={siteConfig.github} className="hover:text-primary transition-colors">GitHub</a>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

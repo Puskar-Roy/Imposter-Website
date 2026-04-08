@@ -1,9 +1,43 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import siteConfig from '../config';
+import { FaGithub } from 'react-icons/fa';
+import { Menu, X, ChevronRight } from 'lucide-react';
+
+const GitHubStarButton = ({ className = "" }: { className?: string }) => {
+  const [stars, setStars] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch('https://api.github.com/repos/Puskar-Roy/Imposter')
+      .then(res => res.json())
+      .then(data => {
+        if (data.stargazers_count !== undefined) {
+          setStars(data.stargazers_count);
+        }
+      })
+      .catch(() => setStars(null));
+  }, []);
+
+  return (
+    <Link
+      href={siteConfig.github}
+      target="_blank"
+      className={`btn-premium text-sm py-2 px-3 sm:px-4 shadow-[0_0_15px_rgba(0,166,126,0.2)] inline-flex items-center gap-2 group ${className}`}
+    >
+      <FaGithub className="w-4 h-4 group-hover:scale-110 transition-transform" />
+      <span className="font-semibold hidden sm:inline">Star on GitHub</span>
+      {stars !== null && (
+        <span className="ml-1 sm:pl-2 sm:border-l border-white/20 text-white/90 tabular-nums">
+          {stars}
+        </span>
+      )}
+    </Link>
+  );
+};
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,27 +64,17 @@ const Navbar = () => {
           <Link href="/model-providers" className="hover:text-primary transition-colors">Model Providers</Link>
           <Link href="/architecture" className="hover:text-primary transition-colors">Architecture</Link>
           <Link href="/upcoming" className="hover:text-primary transition-colors">Upcoming</Link>
-          <Link href={siteConfig.github} target="_blank" className="hover:text-primary transition-colors">GitHub</Link>
         </div>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/download"
-            className="btn-premium text-sm py-2 px-4 shadow-[0_0_15px_rgba(0,166,126,0.2)] hidden sm:inline-flex items-center gap-2"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="shrink-0"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" /></svg>
-            Download
-          </Link>
-
+          <GitHubStarButton />
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden p-2 text-white hover:bg-white/5 rounded-full transition-colors"
             aria-label="Toggle menu"
           >
-            <span className={`w-5 h-0.5 bg-white transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`w-5 h-0.5 bg-white transition-all ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`w-5 h-0.5 bg-white transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -58,18 +82,21 @@ const Navbar = () => {
 
       {menuOpen && (
         <div className="md:hidden mt-2 mx-auto max-w-7xl bg-black/90 backdrop-blur-xl border border-white/5 rounded-2xl p-6 flex flex-col gap-4 text-sm font-medium text-zinc-400 animate-fade-up">
-          <Link href="/features" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Features</Link>
-          <Link href="/model-providers" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Model Providers</Link>
-          <Link href="/architecture" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Architecture</Link>
-          <Link href="/upcoming" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">Upcoming Features</Link>
-          <Link href={siteConfig.github} target="_blank" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2">GitHub</Link>
-          <Link
-            href="/download"
-            onClick={() => setMenuOpen(false)}
-            className="btn-premium text-sm py-3 px-6 text-center mt-2"
-          >
-            Download for Windows
+          <Link href="/features" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2 flex items-center justify-between">
+            Features <ChevronRight size={14} className="opacity-50" />
           </Link>
+          <Link href="/model-providers" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2 flex items-center justify-between">
+            Model Providers <ChevronRight size={14} className="opacity-50" />
+          </Link>
+          <Link href="/architecture" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2 flex items-center justify-between">
+            Architecture <ChevronRight size={14} className="opacity-50" />
+          </Link>
+          <Link href="/upcoming" onClick={() => setMenuOpen(false)} className="hover:text-primary transition-colors py-2 flex items-center justify-between">
+            Upcoming Features <ChevronRight size={14} className="opacity-50" />
+          </Link>
+          <div className="pt-2 border-t border-white/5">
+            <GitHubStarButton className="w-full justify-center" />
+          </div>
         </div>
       )}
     </nav>
@@ -77,3 +104,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
