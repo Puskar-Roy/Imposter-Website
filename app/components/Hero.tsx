@@ -27,16 +27,16 @@ const Hero = () => {
           Focus your performance with a discreet, always-on-top AI layer that sits on your desktop. Invisible to meeting platforms and screen-sharing, <strong className="text-zinc-300">Imposter </strong> connects you to the world&apos;s most powerful models. Zero trace. 100% stealth.
         </p>
 
-        <div className="grid grid-cols-1 sm:flex sm:flex-row flex-wrap gap-3 md:gap-4 justify-center items-center mb-10 w-full max-w-sm sm:max-w-none mx-auto px-4 sm:px-0">
-          <Link href="/download?os=windows" className="btn-premium flex items-center justify-center gap-3 group px-8 py-4 text-lg shadow-[0_0_20px_rgba(0,166,126,0.2)] w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center items-center mb-10 w-[95%] sm:w-full max-w-none mx-auto px-4 sm:px-0">
+          <Link href="/download?os=windows" className="btn-premium flex items-center justify-center gap-3 group px-6 py-4 text-base md:text-lg shadow-[0_0_20px_rgba(0,166,126,0.2)] w-full sm:w-auto">
             <FaWindows className="text-xl group-hover:scale-110 transition-transform" />
             <span>Windows</span>
           </Link>
-          <Link href="/download?os=mac" className="px-8 py-4 text-lg font-bold text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 rounded-full transition-all flex items-center justify-center gap-3 group shadow-xl w-full sm:w-auto">
+          <Link href="/download?os=mac" className="px-6 py-4 text-base md:text-lg font-bold text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 rounded-full transition-all flex items-center justify-center gap-3 group shadow-xl w-full sm:w-auto">
             <FaApple className="text-xl group-hover:scale-110 transition-transform" />
             <span>macOS</span>
           </Link>
-          <Link href="/download?os=linux" className="px-8 py-4 text-lg font-bold text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 rounded-full transition-all flex items-center justify-center gap-3 group shadow-xl w-full sm:w-auto">
+          <Link href="/download?os=linux" className="px-6 py-4 text-base md:text-lg font-bold text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 rounded-full transition-all flex items-center justify-center gap-3 group shadow-xl w-full sm:w-auto">
             <FaLinux className="text-xl group-hover:scale-110 transition-transform" />
             <span>Linux</span>
           </Link>
