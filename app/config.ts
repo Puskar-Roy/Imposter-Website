@@ -12,11 +12,12 @@ const siteConfig = {
   version: "1.0.0-beta",
 
   // Set to true when the release is live to enable direct downloads.
-  released: false,
+  released: true,
 
   github: "https://github.com/Puskar-Roy/Imposter",
   githubReleases: "https://github.com/Puskar-Roy/Imposter/releases",
-  downloadUrl: "https://github.com/Puskar-Roy/Imposter/releases/latest/download/Imposter-Setup.exe",
+  githubTags: "https://github.com/Puskar-Roy/Imposter/tags",
+  downloadUrl: "https://github.com/Puskar-Roy/Imposter/releases/download/v1.0.0/Imposter-Setup-1.0.0.exe",
 
   ollamaUrl: "https://ollama.com",
   openRouterUrl: "https://openrouter.ai",

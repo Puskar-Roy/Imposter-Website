@@ -6,14 +6,14 @@ import siteConfig from '../config';
 import { FaWindows, FaGithub } from 'react-icons/fa';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 
+import DownloadClient from './DownloadClient';
+
 export const metadata = {
   title: 'Download & Setup - Imposter AI',
-  description: 'Download Imposter for Windows and set up Ollama, OpenRouter, and AssemblyAI for the ultimate stealth AI assistant.',
+  description: 'Download Imposter for your OS and set up Ollama, OpenRouter, and AssemblyAI for the ultimate stealth AI assistant.',
 };
 
 const DownloadPage = () => {
-  const isReleased = siteConfig.released;
-
   return (
     <main className="min-h-screen bg-black text-white selection:bg-primary/30">
       <Navbar />
@@ -23,7 +23,7 @@ const DownloadPage = () => {
 
         <section className="text-center mb-20">
           <div className="inline-block px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-bold mb-6 tracking-wider uppercase italic">
-            Windows Desktop App
+            Cross-Platform App
           </div>
           <h1 className="text-4xl md:text-6xl font-black mb-6 teal-gradient-text tracking-tighter italic uppercase -skew-x-6">
             Download & Setup
@@ -34,36 +34,7 @@ const DownloadPage = () => {
         </section>
 
 
-        <section className="mb-20 flex flex-col items-center">
-          {isReleased ? (
-            <a
-              href={siteConfig.downloadUrl}
-              className="btn-premium px-10 py-5 text-xl flex items-center gap-3 mb-4 group"
-            >
-              <FaWindows className="group-hover:scale-110 transition-transform" />
-              Download Imposter v{siteConfig.version}
-            </a>
-          ) : (
-            <div className="glass-card p-8 text-center max-w-lg w-full">
-              <div className="p-4 bg-primary/10 text-primary rounded-full mb-6 w-16 h-16 flex items-center justify-center mx-auto">
-                <FaWindows size={28} />
-              </div>
-              <h3 className="text-2xl font-black mb-3 italic uppercase tracking-tight">Releasing Soon</h3>
-              <p className="text-zinc-400 text-sm mb-6">
-                Imposter v{siteConfig.version} is in final testing. Star the repo to get notified when it drops.
-              </p>
-              <a
-                href={siteConfig.github}
-                target="_blank"
-                className="btn-premium px-8 py-3 text-sm inline-flex items-center gap-2 group"
-              >
-                <FaGithub className="group-hover:scale-110 transition-transform" />
-                Star on GitHub
-              </a>
-            </div>
-          )}
-          <p className="text-zinc-600 text-xs mt-4">Windows 10+ required. ~80MB installer.</p>
-        </section>
+        <DownloadClient />
 
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-20" />
 
