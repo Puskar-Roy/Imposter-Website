@@ -207,6 +207,13 @@ const DownloadContent = () => {
   };
 
   const confirmDownload = () => {
+    // Fire and forget analytics call
+    fetch('/api/download', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ platform: os }),
+    }).catch(err => console.error('Failed to track download:', err));
+
     setHasAcceptedSecurity(true);
     setShowSecurityModal(false);
   };
